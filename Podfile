@@ -1,16 +1,37 @@
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+target 'Swift4’ do
+#source 'https://github.com/CocoaPods/Specs.git'
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+platform :ios, '14.0'
 use_frameworks!
-pod 'Alamofire', '~> 3.0'
 
-platform :ios, '8.0'
-use_frameworks!
-target 'Swift2Study' do
-    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+pod 'Alamofire', '4.9.1'
+pod 'SnapKit'
+pod 'Kingfisher', '4.10.1'
+pod 'ReactiveCocoa'
+
+pod 'SwiftyJSON'
+
+pod 'SDWebImage'
+
+
+#pod 'YYModel'
+
+#pod 'YYText'
+pod 'RTLabel'
+pod 'iCarousel'
+pod 'MWPhotoBrowser'
+
+#pod 'Hero'
+
+#pod 'Moya'
+
+#pod 'GPUImage'
+pod 'MBProgressHUD'
+
+
+pod 'CocoaDebug', :configurations => ['Debug']
+
+
+#pod 'GodEye'
+
 end
-
-platform :ios, '8.0'
-use_frameworks!
-pod 'SDWebImage', '~>3.7'
-
-
