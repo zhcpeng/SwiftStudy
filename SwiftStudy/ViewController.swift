@@ -1,13 +1,11 @@
 //
 //  ViewController.swift
-//  Swift3
+//  SwiftStudy
 //
-//  Created by zhcpeng on 16/5/27.
-//  Copyright © 2016年 zhcpeng. All rights reserved.
+//  Created by zhangchunpeng1 on 2021/2/19.
 //
 
 import UIKit
-
 import ReactiveCocoa
 
 class ViewController: UIViewController {
@@ -34,8 +32,8 @@ class ViewController: UIViewController {
 //        self.view.backgroundColor = self.traitCollection.userInterfaceStyle == .light ? UIColor.white : UIColor.black
 //    }
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         self.view.backgroundColor = self.traitCollection.userInterfaceStyle == .light ? UIColor.white : UIColor.black
         
@@ -43,18 +41,18 @@ class ViewController: UIViewController {
         privateButton.snp.makeConstraints { (make) in
             make.left.bottom.equalToSuperview()
             make.height.equalTo(100)
-            make.width.equalTo(self.view.snp_width).dividedBy(2)
+            make.width.equalTo(self.view.snp.width).dividedBy(2)
         }
         listButton.snp.makeConstraints { (make) in
             make.right.bottom.equalToSuperview()
             make.height.equalTo(100)
-            make.width.equalTo(self.view.snp_width).dividedBy(2)
+            make.width.equalTo(self.view.snp.width).dividedBy(2)
         }
 
-		DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-			let vc = RootListController()
-			self.navigationController?.pushViewController(vc, animated: true)
-		}
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            let vc = RootListController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @objc func buttonAction(_ sender: UIButton) {
@@ -71,3 +69,4 @@ class ViewController: UIViewController {
     }
 
 }
+
