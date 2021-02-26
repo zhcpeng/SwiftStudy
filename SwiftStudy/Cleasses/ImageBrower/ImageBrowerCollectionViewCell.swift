@@ -35,6 +35,7 @@ class ImageBrowerCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate 
         scrollView.delaysContentTouches = false
         scrollView.canCancelContentTouches = true
         scrollView.alwaysBounceVertical = false
+        scrollView.backgroundColor = UIColor.black
         return scrollView
     }()
     

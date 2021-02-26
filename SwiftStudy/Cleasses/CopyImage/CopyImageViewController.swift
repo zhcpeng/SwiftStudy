@@ -26,12 +26,40 @@ class CopyImageViewController: UIViewController {
         return button
     }()
     
+    private var changeCount: Int = 0
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.checkImage()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(checkImage), name: UIApplication.didBecomeActiveNotification, object: nil)
+        
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func saveAction() {
+        if let image = imageView.image {
+            ImageManager.shared.saveImage(image)
+        }
+    }
+    
+    @objc func checkImage() {
         let pboard = UIPasteboard.general;
-        if let image = pboard.image {
+        print(pboard.changeCount)
+        if let image = pboard.image, pboard.changeCount != changeCount {
             imageView.image = image
+//            pboard.image = nil
             button.isEnabled = true
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -41,19 +69,8 @@ class CopyImageViewController: UIViewController {
             print("No Image")
             button.isEnabled = false
         }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
         
-    }
-    
-    @objc func saveAction() {
-        if let image = imageView.image {
-            ImageManager.shared.saveImage(image)
-        }
+        changeCount = pboard.changeCount
     }
 
 
