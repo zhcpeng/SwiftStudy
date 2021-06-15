@@ -59,7 +59,8 @@ class RootListController: UITableViewController {
         itemList.append(TempViewController.self)
         itemList.append(CellDidEndDispalyViewController.self)
         itemList.append(KuGouViewController.self)
-        
+        itemList.append(RetinaDrawRectViewController.self)
+        itemList.append(AddSubviewViewController.self)
         
 //        itemList.append(DownloadListViewController.self)
 //        itemList.append(LocalImageBrowerViewController.self)

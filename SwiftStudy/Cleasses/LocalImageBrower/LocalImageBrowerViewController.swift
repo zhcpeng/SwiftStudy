@@ -41,13 +41,29 @@ class LocalImageBrowerViewController: UIViewController, UICollectionViewDelegate
         return button
     }()
     
-    private var currentIndex: Int = 0
-    
     private var rotating: Bool = false
     
     private let paths = NSHomeDirectory() + "/Documents/image"
-    private var itemList: [String] = []
     
+    var itemList: [String] = []
+    var currentIndex: Int = 0 {
+        didSet{
+            self.title = "\(currentIndex)/\(itemList.count)"
+        }
+    }
+//    private var cache: NSCache<NSString, UIImage> = {
+//        let cache = NSCache<NSString, UIImage>()
+//
+//        return cache
+//    }()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if currentIndex > 0 {
+            collectionView.scrollToItem(at: IndexPath(item: currentIndex, section: 0), at: .centeredHorizontally, animated: false)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,16 +75,19 @@ class LocalImageBrowerViewController: UIViewController, UICollectionViewDelegate
             make.edges.equalTo(view)
         }
         
-        if !FileManager.default.fileExists(atPath: paths) {
-            try? FileManager.default.createDirectory(atPath: paths, withIntermediateDirectories: true, attributes: nil)
+        if itemList.isEmpty {
+            if !FileManager.default.fileExists(atPath: paths) {
+                try? FileManager.default.createDirectory(atPath: paths, withIntermediateDirectories: true, attributes: nil)
+            }
+            try? itemList = FileManager.default.contentsOfDirectory(atPath: paths)
+            if !itemList.isEmpty {
+    //            itemList.sort()
+                itemList = itemList.sorted().reversed()
+                print("load success")
+//                collectionView.reloadData()
+            }
         }
-        try? itemList = FileManager.default.contentsOfDirectory(atPath: paths)
-        if !itemList.isEmpty {
-//            itemList.sort()
-            itemList = itemList.sorted().reversed()
-            print("load success")
-            collectionView.reloadData()
-        }
+        collectionView.reloadData()
     }
 
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
@@ -105,11 +124,19 @@ class LocalImageBrowerViewController: UIViewController, UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageBrowerCollectionViewCell", for: indexPath) as! ImageBrowerCollectionViewCell
         
         let path = paths + "/" + itemList[indexPath.row]
-        let url = URL(fileURLWithPath: path)
-        if let data = try? Data(contentsOf: url, options: []), let image = UIImage(data: data){
+        if let image = LocalImageCacheManager.default.cache.object(forKey: path as NSString) {
             cell.image = image
+            print("cache:\(indexPath.row)")
+        } else {
+            let url = URL(fileURLWithPath: path)
+            
+            if let data = try? Data(contentsOf: url, options: []), let image = UIImage(data: data){
+                cell.image = image
+                
+                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString)
+//                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString, cost: data.count)
+            }
         }
-        
         return cell
     }
     
@@ -118,9 +145,18 @@ class LocalImageBrowerViewController: UIViewController, UICollectionViewDelegate
         guard let imageCell = cell as? ImageBrowerCollectionViewCell else { return }
 
         let path = paths + "/" + itemList[indexPath.row]
-        let url = URL(fileURLWithPath: path)
-        if let data = try? Data(contentsOf: url, options: []), let image = UIImage(data: data){
+        if let image = LocalImageCacheManager.default.cache.object(forKey: path as NSString) {
             imageCell.image = image
+            print("cache:\(indexPath.row)")
+        } else {
+            let url = URL(fileURLWithPath: path)
+            
+            if let data = try? Data(contentsOf: url, options: []), let image = UIImage(data: data){
+                imageCell.image = image
+                
+                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString)
+//                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString, cost: data.count)
+            }
         }
     }
     

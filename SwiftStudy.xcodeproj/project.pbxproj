@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5629A0A42678A27900C67DFA /* LocalImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629A0A32678A27900C67DFA /* LocalImageCacheManager.swift */; };
+		564C7F272611AE5700854A26 /* AddSubviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C7F262611AE5700854A26 /* AddSubviewViewController.swift */; };
+		569049392602081C00FEA1D5 /* RetinaDrawRectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569049382602081B00FEA1D5 /* RetinaDrawRectViewController.swift */; };
+		5690493C2602083C00FEA1D5 /* RetinaDrawRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690493B2602083C00FEA1D5 /* RetinaDrawRectView.swift */; };
 		56B9C4A625DFA388009D145F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9C4A525DFA388009D145F /* AppDelegate.swift */; };
 		56B9C4AA25DFA388009D145F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9C4A925DFA388009D145F /* ViewController.swift */; };
 		56B9C4AF25DFA38B009D145F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B9C4AE25DFA38B009D145F /* Assets.xcassets */; };
@@ -134,11 +138,17 @@
 		56B9C60A25DFA50F009D145F /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9C59025DFA50F009D145F /* UIButton.swift */; };
 		56B9C64225DFA9D8009D145F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B9C64125DFA9D8009D145F /* Main.storyboard */; };
 		56B9C64525DFAA82009D145F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9C64425DFAA81009D145F /* SceneDelegate.swift */; };
+		56E7DC722678922100C9B0D6 /* ImageLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E7DC712678922100C9B0D6 /* ImageLibraryViewController.swift */; };
+		56E7DC752678926300C9B0D6 /* ImageLibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E7DC742678926300C9B0D6 /* ImageLibraryCollectionViewCell.swift */; };
 		D45960285AA50AC7F49768BF /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2523FC8DBEF479EA5200178 /* Pods_SwiftStudy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53FEA632433382B7EACBC262 /* Pods-SwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.release.xcconfig"; path = "Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
+		5629A0A32678A27900C67DFA /* LocalImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageCacheManager.swift; sourceTree = "<group>"; };
+		564C7F262611AE5700854A26 /* AddSubviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubviewViewController.swift; sourceTree = "<group>"; };
+		569049382602081B00FEA1D5 /* RetinaDrawRectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetinaDrawRectViewController.swift; sourceTree = "<group>"; };
+		5690493B2602083C00FEA1D5 /* RetinaDrawRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetinaDrawRectView.swift; sourceTree = "<group>"; };
 		56B9C4A225DFA388009D145F /* SwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B9C4A525DFA388009D145F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B9C4A925DFA388009D145F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +309,8 @@
 		56B9C59025DFA50F009D145F /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		56B9C64125DFA9D8009D145F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = SOURCE_ROOT; };
 		56B9C64425DFAA81009D145F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		56E7DC712678922100C9B0D6 /* ImageLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLibraryViewController.swift; sourceTree = "<group>"; };
+		56E7DC742678926300C9B0D6 /* ImageLibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		63543F0CD6CFDADD0110498B /* Pods-SwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.debug.xcconfig"; path = "Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		B2523FC8DBEF479EA5200178 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -315,6 +327,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		564C7F252611AE4200854A26 /* AddSubview */ = {
+			isa = PBXGroup;
+			children = (
+				564C7F262611AE5700854A26 /* AddSubviewViewController.swift */,
+			);
+			path = AddSubview;
+			sourceTree = "<group>";
+		};
+		56904931260207D600FEA1D5 /* RetinaLayer */ = {
+			isa = PBXGroup;
+			children = (
+				569049382602081B00FEA1D5 /* RetinaDrawRectViewController.swift */,
+				5690493B2602083C00FEA1D5 /* RetinaDrawRectView.swift */,
+			);
+			path = RetinaLayer;
+			sourceTree = "<group>";
+		};
 		56B9C49925DFA388009D145F = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +476,8 @@
 		56B9C4FB25DFA50E009D145F /* Cleasses */ = {
 			isa = PBXGroup;
 			children = (
+				564C7F252611AE4200854A26 /* AddSubview */,
+				56904931260207D600FEA1D5 /* RetinaLayer */,
 				56B9C4FC25DFA50E009D145F /* PhotoBrower */,
 				56B9C4FF25DFA50E009D145F /* ImageTransitionViewController */,
 				56B9C50125DFA50E009D145F /* Tree */,
@@ -593,6 +624,9 @@
 			isa = PBXGroup;
 			children = (
 				56B9C51825DFA50E009D145F /* LocalImageBrowerViewController.swift */,
+				56E7DC712678922100C9B0D6 /* ImageLibraryViewController.swift */,
+				56E7DC742678926300C9B0D6 /* ImageLibraryCollectionViewCell.swift */,
+				5629A0A32678A27900C67DFA /* LocalImageCacheManager.swift */,
 			);
 			path = LocalImageBrower;
 			sourceTree = "<group>";
@@ -1131,6 +1165,7 @@
 				56B9C5B725DFA50F009D145F /* ImageBrowerCollectionViewCell.swift in Sources */,
 				56B9C5D125DFA50F009D145F /* UIThirdViewController.swift in Sources */,
 				56B9C5A325DFA50F009D145F /* YYTextArchiver.m in Sources */,
+				56E7DC722678922100C9B0D6 /* ImageLibraryViewController.swift in Sources */,
 				56B9C5C925DFA50F009D145F /* UIImageViewCategory.swift in Sources */,
 				56B9C5C725DFA50F009D145F /* SecurityViewController.swift in Sources */,
 				56B9C5A725DFA50F009D145F /* NSAttributedString+YYText.m in Sources */,
@@ -1149,7 +1184,9 @@
 				56B9C5D325DFA50F009D145F /* UIFirstViewController.swift in Sources */,
 				56B9C5A825DFA50F009D145F /* UIPasteboard+YYText.m in Sources */,
 				56B9C5F025DFA50F009D145F /* CellDidEndDispalyViewController.swift in Sources */,
+				564C7F272611AE5700854A26 /* AddSubviewViewController.swift in Sources */,
 				56B9C60425DFA50F009D145F /* XCRMoreButton.swift in Sources */,
+				569049392602081C00FEA1D5 /* RetinaDrawRectViewController.swift in Sources */,
 				56B9C59C25DFA50F009D145F /* YYTextSelectionView.m in Sources */,
 				56B9C5BD25DFA50F009D145F /* SelectedCollectionViewController.swift in Sources */,
 				56B9C5A925DFA50F009D145F /* YYTextTransaction.m in Sources */,
@@ -1210,8 +1247,11 @@
 				56B9C5B925DFA50F009D145F /* XButtonViewController.swift in Sources */,
 				56B9C5A625DFA50F009D145F /* NSParagraphStyle+YYText.m in Sources */,
 				56B9C59825DFA50F009D145F /* YYTextEffectWindow.m in Sources */,
+				56E7DC752678926300C9B0D6 /* ImageLibraryCollectionViewCell.swift in Sources */,
 				56B9C5FF25DFA50F009D145F /* PerformanceMonitor.m in Sources */,
 				56B9C5F825DFA50F009D145F /* CopyImageViewController.swift in Sources */,
+				5629A0A42678A27900C67DFA /* LocalImageCacheManager.swift in Sources */,
+				5690493C2602083C00FEA1D5 /* RetinaDrawRectView.swift in Sources */,
 				56B9C5F225DFA50F009D145F /* XCRPhotosAlbumViewController.swift in Sources */,
 				56B9C5F525DFA50F009D145F /* GIFViewController.swift in Sources */,
 				56B9C5AA25DFA50F009D145F /* UIView+YYText.m in Sources */,

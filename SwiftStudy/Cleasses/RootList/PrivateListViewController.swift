@@ -18,6 +18,7 @@ class PrivateListViewController: UITableViewController {
         itemList.append(DownloadListViewController.self)
         itemList.append(LocalImageBrowerViewController.self)
         itemList.append(CopyImageViewController.self)
+        itemList.append(ImageLibraryViewController.self)
 
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
     }
