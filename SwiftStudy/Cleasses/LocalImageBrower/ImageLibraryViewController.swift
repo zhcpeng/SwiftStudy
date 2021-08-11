@@ -78,12 +78,16 @@ class ImageLibraryViewController: UIViewController, UICollectionViewDelegate, UI
         } else {
             let url = URL(fileURLWithPath: path)
             
-            if let data = try? Data(contentsOf: url, options: []), let image = UIImage(data: data){
-                cell.image = image
-                
-                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString)
-//                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString, cost: data.count)
-            }
+            let image = self.downsample(imageAt: url, to: CGSize(width: self.itemWidth, height: self.itemWidth), scale: 3)
+            cell.image = image
+            LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString)
+            
+//            if let data = try? Data(contentsOf: url, options: []), let image = UIImage(data: data){
+//                cell.image = image
+//
+//                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString)
+////                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString, cost: data.count)
+//            }
         }
         return cell
     }
@@ -94,5 +98,21 @@ class ImageLibraryViewController: UIViewController, UICollectionViewDelegate, UI
         vc.currentIndex = indexPath.item
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func downsample(imageAt imageURL: URL, to pointSize: CGSize, scale: CGFloat) -> UIImage
+    {
+        let sourceOpt = [kCGImageSourceShouldCache : false] as CFDictionary
+        // 其他场景可以用createwithdata (data并未decode,所占内存没那么大),
+        let source = CGImageSourceCreateWithURL(imageURL as CFURL, sourceOpt)!
+        
+        let maxDimension = max(pointSize.width, pointSize.height) * scale
+        let downsampleOpt = [kCGImageSourceCreateThumbnailFromImageAlways : true,
+                             kCGImageSourceShouldCacheImmediately : true ,
+                             kCGImageSourceCreateThumbnailWithTransform : true,
+                             kCGImageSourceThumbnailMaxPixelSize : maxDimension] as CFDictionary
+        let downsampleImage = CGImageSourceCreateThumbnailAtIndex(source, 0, downsampleOpt)!
+        return UIImage(cgImage: downsampleImage)
+    }
+
 
 }
