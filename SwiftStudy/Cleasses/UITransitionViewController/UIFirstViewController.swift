@@ -15,10 +15,7 @@ class UIFirstViewController: UIViewController {
         button.backgroundColor = UIColor.red
         button.reactive.controlEvents(.touchUpInside).observeValues({ [weak self](_) in
             let nav = UINavigationController(rootViewController: UISecondViewController())
-            
-//            nav.transitioningDelegate = XCRPhotoDismissManager.share
-//            XCRPhotoDismissManager.share.interactiveTransition.viewController = nav
-
+            nav.modalPresentationStyle = .fullScreen
             self?.present(nav, animated: true, completion: nil)
         })
         return button
@@ -26,9 +23,6 @@ class UIFirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
         self.view.backgroundColor = UIColor.gray
         
         view.addSubview(button)
@@ -36,11 +30,6 @@ class UIFirstViewController: UIViewController {
             make.center.equalToSuperview()
             make.height.width.equalTo(50)
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     deinit {

@@ -53,6 +53,32 @@ class ViewController: UIViewController {
             let vc = RootListController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
+        
+//        var
+        let label = UILabel()
+        label.frame = CGRect(x: 10, y: 100, width: 200, height: 30)
+        label.textColor = UIColor.red
+        self.view.addSubview(label)
+        
+        var date: Date? = nil
+        if (TaskInfoTool.runORDebug()) {
+            date = Date();
+            UserDefaults.standard.set(Date(), forKey: "kLastInit")
+        } else {
+            date = UserDefaults.standard.object(forKey: "kLastInit") as? Date
+        }
+        if var d = date {
+            d = d.addingTimeInterval(60 * 60 * 24 * 7)
+            
+            let formater = DateFormatter()
+            formater.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            formater.locale = NSLocale.system
+            let s = formater.string(from: d)
+            label.text = s;
+        }
+        
+        
+        
     }
     
     @objc func buttonAction(_ sender: UIButton) {

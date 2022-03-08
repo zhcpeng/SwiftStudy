@@ -27,18 +27,10 @@ class UIThirdViewController: UIViewController, UIViewControllerTransitioningDele
         }
 //        return .lightContent
     }
-    
-//    override var prefersStatusBarHidden: Bool {
-//        return true
-//    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
- 
-//        modalPresentationCapturesStatusBarAppearance = true
-        
         view.backgroundColor = UIColor.cyan
         
         view.addSubview(button)
@@ -53,17 +45,9 @@ class UIThirdViewController: UIViewController, UIViewControllerTransitioningDele
         /// 使用RAC会造成内存泄漏
         panRecognizer.addTarget(self, action: #selector(panGestureRecognizer(_:)))
         view.addGestureRecognizer(panRecognizer)
-    
-        //UIPresentationController
-        
-//        transitionCoordinator
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     deinit {
         print("\(#file):\(#function)")
     }
