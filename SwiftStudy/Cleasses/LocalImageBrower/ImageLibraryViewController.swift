@@ -9,15 +9,15 @@ import UIKit
 
 class ImageLibraryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    fileprivate var itemWidth: CGFloat = floor((UIScreen.main.bounds.size.width - 50) / 3)
+    fileprivate var itemWidth: CGFloat = floor((UIScreen.main.bounds.size.width - 10) / 3)
 
     fileprivate lazy var flowLayout: UICollectionViewFlowLayout = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
-        flowLayout.minimumLineSpacing = 10
-        flowLayout.minimumInteritemSpacing = 10
+        flowLayout.minimumLineSpacing = 5
+        flowLayout.minimumInteritemSpacing = 5
         flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth)
-        flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return flowLayout
     }()
     
