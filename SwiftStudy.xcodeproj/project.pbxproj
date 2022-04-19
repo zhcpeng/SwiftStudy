@@ -11,6 +11,7 @@
 		564C7F272611AE5700854A26 /* AddSubviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C7F262611AE5700854A26 /* AddSubviewViewController.swift */; };
 		569049392602081C00FEA1D5 /* RetinaDrawRectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569049382602081B00FEA1D5 /* RetinaDrawRectViewController.swift */; };
 		5690493C2602083C00FEA1D5 /* RetinaDrawRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690493B2602083C00FEA1D5 /* RetinaDrawRectView.swift */; };
+		569CEBC726E6247200F31668 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 569CEBC626E6247200F31668 /* Location.gpx */; };
 		56B9C4A625DFA388009D145F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9C4A525DFA388009D145F /* AppDelegate.swift */; };
 		56B9C4AA25DFA388009D145F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9C4A925DFA388009D145F /* ViewController.swift */; };
 		56B9C4AF25DFA38B009D145F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B9C4AE25DFA38B009D145F /* Assets.xcassets */; };
@@ -149,6 +150,7 @@
 		564C7F262611AE5700854A26 /* AddSubviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubviewViewController.swift; sourceTree = "<group>"; };
 		569049382602081B00FEA1D5 /* RetinaDrawRectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetinaDrawRectViewController.swift; sourceTree = "<group>"; };
 		5690493B2602083C00FEA1D5 /* RetinaDrawRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetinaDrawRectView.swift; sourceTree = "<group>"; };
+		569CEBC626E6247200F31668 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		56B9C4A225DFA388009D145F /* SwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B9C4A525DFA388009D145F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B9C4A925DFA388009D145F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 				56B9C4AE25DFA38B009D145F /* Assets.xcassets */,
 				56B9C4B025DFA38B009D145F /* LaunchScreen.storyboard */,
 				56B9C4B325DFA38B009D145F /* Info.plist */,
+				569CEBC626E6247200F31668 /* Location.gpx */,
 			);
 			path = SwiftStudy;
 			sourceTree = "<group>";
@@ -1077,6 +1080,7 @@
 				56B9C5C425DFA50F009D145F /* 15.jpg in Resources */,
 				56B9C5DF25DFA50F009D145F /* backimage@3x.png in Resources */,
 				56B9C64225DFA9D8009D145F /* Main.storyboard in Resources */,
+				569CEBC726E6247200F31668 /* Location.gpx in Resources */,
 				56B9C4B225DFA38B009D145F /* LaunchScreen.storyboard in Resources */,
 				56B9C4AF25DFA38B009D145F /* Assets.xcassets in Resources */,
 				56B9C5E625DFA50F009D145F /* CallPhoneViewController.xib in Resources */,

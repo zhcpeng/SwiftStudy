@@ -124,40 +124,46 @@ class LocalImageBrowerViewController: UIViewController, UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageBrowerCollectionViewCell", for: indexPath) as! ImageBrowerCollectionViewCell
         
         let path = paths + "/" + itemList[indexPath.row]
-        if let image = LocalImageCacheManager.default.cache.object(forKey: path as NSString) {
-            cell.image = image
-            print("cache:\(indexPath.row)")
-        } else {
+////        if let image = LocalImageCacheManager.default.cache.object(forKey: path as NSString) {
+////            cell.image = image
+////            print("cache:\(indexPath.row)")
+////        }
+////        else {
             let url = URL(fileURLWithPath: path)
-            
+
             if let data = try? Data(contentsOf: url, options: []), let image = UIImage(data: data){
                 cell.image = image
-                
-                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString)
-//                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString, cost: data.count)
+//
+////                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString)
+////                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString, cost: data.count)
             }
-        }
+//        }
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard currentIndex != indexPath.item, rotating == false else { return }
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        guard currentIndex != indexPath.item, rotating == false else { return }
+//        guard let imageCell = cell as? ImageBrowerCollectionViewCell, imageCell.image == nil else { return }
+//
+//        let path = paths + "/" + itemList[indexPath.row]
+////        if let image = LocalImageCacheManager.default.cache.object(forKey: path as NSString) {
+////            imageCell.image = image
+////            print("cache:\(indexPath.row)")
+////        } else {
+//            let url = URL(fileURLWithPath: path)
+//            
+//            if let data = try? Data(contentsOf: url, options: []), let image = UIImage(data: data){
+//                imageCell.image = image
+//                
+////                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString)
+////                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString, cost: data.count)
+////            }
+//        }
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let imageCell = cell as? ImageBrowerCollectionViewCell else { return }
-
-        let path = paths + "/" + itemList[indexPath.row]
-        if let image = LocalImageCacheManager.default.cache.object(forKey: path as NSString) {
-            imageCell.image = image
-            print("cache:\(indexPath.row)")
-        } else {
-            let url = URL(fileURLWithPath: path)
-            
-            if let data = try? Data(contentsOf: url, options: []), let image = UIImage(data: data){
-                imageCell.image = image
-                
-                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString)
-//                LocalImageCacheManager.default.cache.setObject(image, forKey: path as NSString, cost: data.count)
-            }
-        }
+        imageCell.image = nil
     }
     
     // MARK: - UIScrollViewDelegate

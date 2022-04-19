@@ -35,4 +35,10 @@
  */
 - (void)showMemory;
 
+
+static bool AmIBeingDebugged(void);
+
+
++ (BOOL)runORDebug;
+
 @end

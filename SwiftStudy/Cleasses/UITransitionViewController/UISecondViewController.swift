@@ -9,14 +9,13 @@
 import UIKit
 
 class UISecondViewController: UIViewController {
-//    var vc = UIThirdViewController()
-    
     private lazy var button: UIButton = {
         let button = UIButton(type: .custom)
         button.backgroundColor = UIColor.red
         button.reactive.controlEvents(.touchUpInside).observeValues({ [weak self](_) in
-//            self?.present(self!.vc, animated: true, completion: nil)
-            self?.present(UIThirdViewController(), animated: true, completion: nil)
+            let vc = UIThirdViewController();
+            vc.modalPresentationStyle = .fullScreen;
+            self?.present(vc, animated: true, completion: nil)
         })
         return button
     }()
@@ -29,25 +28,9 @@ class UISecondViewController: UIViewController {
         })
         return button
     }()
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        XCRPhotoDismissManager.share.initInter()
-//        XCRPhotoDismissManager.share.interactiveTransition?.viewController = self.navigationController
-//    }
-    
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//        
-//        XCRPhotoDismissManager.share.interactiveTransition?.viewController = nil
-//        XCRPhotoDismissManager.share.releaseInter()
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         self.view.backgroundColor = UIColor.green
         
@@ -64,17 +47,8 @@ class UISecondViewController: UIViewController {
             make.width.height.equalTo(100)
         }
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//
-//        }
-        
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     deinit {
         print("\(#file):\(#function)")
     }
