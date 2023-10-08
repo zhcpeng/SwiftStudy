@@ -11,7 +11,6 @@
 		564C7F272611AE5700854A26 /* AddSubviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C7F262611AE5700854A26 /* AddSubviewViewController.swift */; };
 		569049392602081C00FEA1D5 /* RetinaDrawRectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569049382602081B00FEA1D5 /* RetinaDrawRectViewController.swift */; };
 		5690493C2602083C00FEA1D5 /* RetinaDrawRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690493B2602083C00FEA1D5 /* RetinaDrawRectView.swift */; };
-		569CEBC726E6247200F31668 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 569CEBC626E6247200F31668 /* Location.gpx */; };
 		56B9C4A625DFA388009D145F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9C4A525DFA388009D145F /* AppDelegate.swift */; };
 		56B9C4AA25DFA388009D145F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9C4A925DFA388009D145F /* ViewController.swift */; };
 		56B9C4AF25DFA38B009D145F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B9C4AE25DFA38B009D145F /* Assets.xcassets */; };
@@ -141,6 +140,7 @@
 		56B9C64525DFAA82009D145F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9C64425DFAA81009D145F /* SceneDelegate.swift */; };
 		56E7DC722678922100C9B0D6 /* ImageLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E7DC712678922100C9B0D6 /* ImageLibraryViewController.swift */; };
 		56E7DC752678926300C9B0D6 /* ImageLibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E7DC742678926300C9B0D6 /* ImageLibraryCollectionViewCell.swift */; };
+		AD1D43A3280E42E400A21021 /* CoreLocationUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1D43A2280E42E400A21021 /* CoreLocationUI.framework */; };
 		D45960285AA50AC7F49768BF /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2523FC8DBEF479EA5200178 /* Pods_SwiftStudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -150,7 +150,6 @@
 		564C7F262611AE5700854A26 /* AddSubviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubviewViewController.swift; sourceTree = "<group>"; };
 		569049382602081B00FEA1D5 /* RetinaDrawRectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetinaDrawRectViewController.swift; sourceTree = "<group>"; };
 		5690493B2602083C00FEA1D5 /* RetinaDrawRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetinaDrawRectView.swift; sourceTree = "<group>"; };
-		569CEBC626E6247200F31668 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		56B9C4A225DFA388009D145F /* SwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B9C4A525DFA388009D145F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B9C4A925DFA388009D145F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -211,7 +210,7 @@
 		56B9C4F725DFA50E009D145F /* UIPasteboard+YYText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPasteboard+YYText.h"; sourceTree = "<group>"; };
 		56B9C4F825DFA50E009D145F /* UIPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UIPlayground.playground; sourceTree = "<group>"; };
 		56B9C4F925DFA50E009D145F /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		56B9C4FA25DFA50E009D145F /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
+		56B9C4FA25DFA50E009D145F /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		56B9C4FD25DFA50E009D145F /* XCRPhotosBrowserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCRPhotosBrowserCollectionViewCell.swift; sourceTree = "<group>"; };
 		56B9C4FE25DFA50E009D145F /* PhotoBrowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowerViewController.swift; sourceTree = "<group>"; };
 		56B9C50025DFA50E009D145F /* ImageTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransitionViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +313,7 @@
 		56E7DC712678922100C9B0D6 /* ImageLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLibraryViewController.swift; sourceTree = "<group>"; };
 		56E7DC742678926300C9B0D6 /* ImageLibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		63543F0CD6CFDADD0110498B /* Pods-SwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.debug.xcconfig"; path = "Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		AD1D43A2280E42E400A21021 /* CoreLocationUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocationUI.framework; path = System/Library/Frameworks/CoreLocationUI.framework; sourceTree = SDKROOT; };
 		B2523FC8DBEF479EA5200178 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -322,6 +322,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1D43A3280E42E400A21021 /* CoreLocationUI.framework in Frameworks */,
 				D45960285AA50AC7F49768BF /* Pods_SwiftStudy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,7 +378,6 @@
 				56B9C4AE25DFA38B009D145F /* Assets.xcassets */,
 				56B9C4B025DFA38B009D145F /* LaunchScreen.storyboard */,
 				56B9C4B325DFA38B009D145F /* Info.plist */,
-				569CEBC626E6247200F31668 /* Location.gpx */,
 			);
 			path = SwiftStudy;
 			sourceTree = "<group>";
@@ -1003,6 +1003,7 @@
 		D1D000D339E2B1EDE511AE44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD1D43A2280E42E400A21021 /* CoreLocationUI.framework */,
 				B2523FC8DBEF479EA5200178 /* Pods_SwiftStudy.framework */,
 			);
 			name = Frameworks;
@@ -1080,7 +1081,6 @@
 				56B9C5C425DFA50F009D145F /* 15.jpg in Resources */,
 				56B9C5DF25DFA50F009D145F /* backimage@3x.png in Resources */,
 				56B9C64225DFA9D8009D145F /* Main.storyboard in Resources */,
-				569CEBC726E6247200F31668 /* Location.gpx in Resources */,
 				56B9C4B225DFA38B009D145F /* LaunchScreen.storyboard in Resources */,
 				56B9C4AF25DFA38B009D145F /* Assets.xcassets in Resources */,
 				56B9C5E625DFA50F009D145F /* CallPhoneViewController.xib in Resources */,
@@ -1330,7 +1330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1385,7 +1385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

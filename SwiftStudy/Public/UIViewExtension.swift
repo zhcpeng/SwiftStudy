@@ -8,11 +8,15 @@
 
 import Foundation
 
-extension UIView {
+public extension UIView {
 //    func addSubviews(_ views: [UIView]) {
 //        views.forEach(addSubview(_:$0))
 //    }
     func addSubviews(_ subviews: [UIView]) {
         subviews.forEach(addSubview)
+    }
+    
+    func addToSuperView(_ superView: UIView) {
+        superView.addSubview(self)
     }
 }
