@@ -24,9 +24,11 @@ class DownloadManager: NSObject {
         return SessionManager(configuration: configuration)
     }()
     
-    private let destination:DownloadRequest.DownloadFileDestination = { _, response in
+    private let destination: DownloadRequest.DownloadFileDestination = { _, response in
         let fileURL = ZFileManager.shared.rootURL.appendingPathComponent(response.suggestedFilename!)
-        return (fileURL,[.removePreviousFile,.createIntermediateDirectories])
+        
+//        let fileURL = DownloadManager.createFileName(response.suggestedFilename!)
+        return (fileURL, [.removePreviousFile,.createIntermediateDirectories])
     }
     
     // URLSession
@@ -91,6 +93,26 @@ class DownloadManager: NSObject {
             print("下载失败！！！")
             break
         }
+    }
+    
+    private class func createFileName(_ name: String) -> URL {
+        let fileURL = ZFileManager.shared.rootURL.appendingPathComponent(name)
+        if FileManager.default.fileExists(atPath: ZFileManager.shared.rootPath + "." + name) {
+//            var newName = name
+            let list = name.split(separator: ".")
+            if var firstName = list.first {
+                let dateForttet = DateFormatter()
+                dateForttet.dateFormat = "MMddHHmmss"
+                let last = dateForttet.string(from: Date.now)
+                firstName = firstName + (firstName.contains("_") ? "_" : "") + last
+                return self.createFileName(firstName + "." + (list.last ?? "mp4"))
+            } else {
+                return fileURL
+            }
+        } else {
+            return fileURL
+        }
+        
     }
 }
 

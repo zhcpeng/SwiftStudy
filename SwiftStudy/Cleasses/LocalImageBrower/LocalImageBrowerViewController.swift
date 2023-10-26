@@ -124,6 +124,7 @@ class LocalImageBrowerViewController: UIViewController, UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageBrowerCollectionViewCell", for: indexPath) as! ImageBrowerCollectionViewCell
         
         let path = paths + "/" + itemList[indexPath.row]
+        cell.name = itemList[indexPath.row];
 ////        if let image = LocalImageCacheManager.default.cache.object(forKey: path as NSString) {
 ////            cell.image = image
 ////            print("cache:\(indexPath.row)")

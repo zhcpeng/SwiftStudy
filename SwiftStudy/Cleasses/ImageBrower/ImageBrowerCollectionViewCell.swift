@@ -20,6 +20,22 @@ class ImageBrowerCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate 
         }
     }
     
+    var name: String? {
+        didSet {
+            if let n = name {
+                nameLabel.text = n
+            }
+        }
+    }
+    
+    lazy var nameLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = UIColor.red.withAlphaComponent(0.5)
+        label.font = UIFont.systemFont(ofSize: 12)
+        return label
+    }()
+    
     
     fileprivate lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -57,6 +73,9 @@ class ImageBrowerCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate 
         }
         scrollView.addSubview(imageView)
         hand()
+        
+        contentView.addSubview(nameLabel)
+        nameLabel.frame = CGRect(x: 0, y: CGRectGetHeight(self.contentView.bounds) - 100, width: CGRectGetWidth(self.contentView.bounds), height: 50)
         
         NotificationCenter.default.reactive.notifications(forName: UIDevice.orientationDidChangeNotification).observe { [weak self](_) in
             // self?.resizeSubviews()

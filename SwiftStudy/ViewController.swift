@@ -35,6 +35,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.window?.backgroundColor = self.traitCollection.userInterfaceStyle == .light ? UIColor.white : UIColor.black
+        
         self.view.backgroundColor = self.traitCollection.userInterfaceStyle == .light ? UIColor.white : UIColor.black
         
         self.view.addSubviews([privateButton, listButton])
