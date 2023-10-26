@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import MBProgressHUD
+//import MBProgressHUD
 
 class DownloadManager: NSObject {
     static let shared: DownloadManager = DownloadManager()

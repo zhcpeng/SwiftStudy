@@ -7,16 +7,16 @@
 //
 
 import UIKit
-import RTLabel
+//import RTLabel
 //import YYText
 
 class RTLabelViewController: UIViewController {
     
-    private lazy var label : RTLabel = {
-        let view = RTLabel(frame: CGRect.zero)
-        view.backgroundColor = UIColor.green
-        return view
-    }()
+//    private lazy var label : RTLabel = {
+//        let view = RTLabel(frame: CGRect.zero)
+//        view.backgroundColor = UIColor.green
+//        return view
+//    }()
     
     private lazy var label1 : UILabel = {
         let view = UILabel(frame: CGRect.zero)
@@ -38,8 +38,8 @@ class RTLabelViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        view.addSubview(label)
-        label.frame = CGRect.init(x: 0, y: 100, width: 300, height: 100)
+//        view.addSubview(label)
+//        label.frame = CGRect.init(x: 0, y: 100, width: 300, height: 100)
 //        label.snp.makeConstraints { (make) in
 //            make.edges.equalTo(view)
 //        }
@@ -51,7 +51,7 @@ class RTLabelViewController: UIViewController {
 //        print(label)
 
 
-        label.text = "您发表的帖子 《系统消息，哈哈哈》 被 无线测试 限时高亮 。 操作理由：限时高亮，如有异议，联系 <a href=\"appxcar://m.xcar.com.cn.sendmessage?params=%7B%22uid%22%3A100066%2C%22username%22%3A%22%5Cu7231%5Cu5361%5Cu5ba2%5Cu670d%22%7D\">爱卡客服</a>"
+//        label.text = "您发表的帖子 《系统消息，哈哈哈》 被 无线测试 限时高亮 。 操作理由：限时高亮，如有异议，联系 <a href=\"appxcar://m.xcar.com.cn.sendmessage?params=%7B%22uid%22%3A100066%2C%22username%22%3A%22%5Cu7231%5Cu5361%5Cu5ba2%5Cu670d%22%7D\">爱卡客服</a>"
         
         
         view.addSubview(label1)

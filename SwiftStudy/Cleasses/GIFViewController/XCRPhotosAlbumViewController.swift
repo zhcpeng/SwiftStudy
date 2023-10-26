@@ -12,7 +12,7 @@ import Photos
 import ReactiveCocoa
 import ReactiveSwift
 import MobileCoreServices
-import MBProgressHUD
+//import MBProgressHUD
 //import YYText
 import AVFoundation
 
