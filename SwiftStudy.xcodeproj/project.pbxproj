@@ -140,6 +140,7 @@
 		56B9C64525DFAA82009D145F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9C64425DFAA81009D145F /* SceneDelegate.swift */; };
 		56E7DC722678922100C9B0D6 /* ImageLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E7DC712678922100C9B0D6 /* ImageLibraryViewController.swift */; };
 		56E7DC752678926300C9B0D6 /* ImageLibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E7DC742678926300C9B0D6 /* ImageLibraryCollectionViewCell.swift */; };
+		8AC35BC02B037F26005C0D76 /* StretchImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC35BBF2B037F26005C0D76 /* StretchImageViewController.swift */; };
 		AD1D43A3280E42E400A21021 /* CoreLocationUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1D43A2280E42E400A21021 /* CoreLocationUI.framework */; };
 		D45960285AA50AC7F49768BF /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2523FC8DBEF479EA5200178 /* Pods_SwiftStudy.framework */; };
 /* End PBXBuildFile section */
@@ -313,6 +314,7 @@
 		56E7DC712678922100C9B0D6 /* ImageLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLibraryViewController.swift; sourceTree = "<group>"; };
 		56E7DC742678926300C9B0D6 /* ImageLibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		63543F0CD6CFDADD0110498B /* Pods-SwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.debug.xcconfig"; path = "Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		8AC35BBF2B037F26005C0D76 /* StretchImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchImageViewController.swift; sourceTree = "<group>"; };
 		AD1D43A2280E42E400A21021 /* CoreLocationUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocationUI.framework; path = System/Library/Frameworks/CoreLocationUI.framework; sourceTree = SDKROOT; };
 		B2523FC8DBEF479EA5200178 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -479,6 +481,7 @@
 		56B9C4FB25DFA50E009D145F /* Cleasses */ = {
 			isa = PBXGroup;
 			children = (
+				8AC35BBE2B037F0C005C0D76 /* StretchImage */,
 				564C7F252611AE4200854A26 /* AddSubview */,
 				56904931260207D600FEA1D5 /* RetinaLayer */,
 				56B9C4FC25DFA50E009D145F /* PhotoBrower */,
@@ -1000,6 +1003,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		8AC35BBE2B037F0C005C0D76 /* StretchImage */ = {
+			isa = PBXGroup;
+			children = (
+				8AC35BBF2B037F26005C0D76 /* StretchImageViewController.swift */,
+			);
+			path = StretchImage;
+			sourceTree = "<group>";
+		};
 		D1D000D339E2B1EDE511AE44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1213,6 +1224,7 @@
 				56B9C60A25DFA50F009D145F /* UIButton.swift in Sources */,
 				56B9C5E225DFA50F009D145F /* RTLabelViewController.swift in Sources */,
 				56B9C59925DFA50F009D145F /* YYTextInput.m in Sources */,
+				8AC35BC02B037F26005C0D76 /* StretchImageViewController.swift in Sources */,
 				56B9C5EC25DFA50F009D145F /* DownloadListViewController.swift in Sources */,
 				56B9C5D625DFA50F009D145F /* TouchMoveViewController.swift in Sources */,
 				56B9C5B025DFA50F009D145F /* TreeViewController.swift in Sources */,
